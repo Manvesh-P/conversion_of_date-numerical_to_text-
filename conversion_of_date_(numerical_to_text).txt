@@ -40,10 +40,7 @@ l2 = list5[::-1]
 for i in range(0,len(l1)):
     print(l1[i],end=' ')
     
-
-
 print(b,end=', ')
-
 
 for j in range(0, len(l2)):
     print(l2[j], end = ' ')
