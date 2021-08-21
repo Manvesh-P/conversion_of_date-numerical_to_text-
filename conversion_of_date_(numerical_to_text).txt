@@ -1,0 +1,52 @@
+# Program to print the date in words.
+
+import datetime
+
+list2 = []
+list3 = []
+list4 = []
+list5 = []
+
+def word(q):
+    list1 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    return list1[q]
+
+date=datetime.date(1998,6,15)
+a = '{:%d}'.format(date)
+b = '{:%B}'.format(date)
+c = '{:%Y}'.format(date)
+d = '{:%A}'.format(date)
+
+day = int(a)
+year = int(c)
+
+while day != 0:
+    list2.append(day % 10)
+    day = day // 10
+    
+while year != 0:
+    list4.append(year % 10)
+    year = year // 10
+    
+print(list4)
+for i in range(0, len(list2)):
+    list3.append(word(list2[i]))
+l1 = list3[::-1]
+
+for j in range(0, len(list4)):
+    list5.append(word(list4[j]))
+l2 = list5[::-1]
+
+for i in range(0,len(l1)):
+    print(l1[i],end=' ')
+    
+
+
+print(b,end=', ')
+
+
+for j in range(0, len(l2)):
+    print(l2[j], end = ' ')
+    
+print(end=',')
+print(d)
