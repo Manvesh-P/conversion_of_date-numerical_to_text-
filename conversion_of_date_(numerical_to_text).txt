@@ -11,11 +11,11 @@ def word(q):
     list1 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
     return list1[q]
 
-date=datetime.date(1998,6,15)
-a = '{:%d}'.format(date)
-b = '{:%B}'.format(date)
-c = '{:%Y}'.format(date)
-d = '{:%A}'.format(date)
+date=datetime.date(1998,6,15)           #modify the date here.
+a = '{:%d}'.format(date)                 #a is for day.
+b = '{:%B}'.format(date)                 # b is for month.
+c = '{:%Y}'.format(date)                 # c is for year.
+d = '{:%A}'.format(date)                 #d is for day in a week.
 
 day = int(a)
 year = int(c)
